@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Pulse Fitness</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .info {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .info p {
+            margin: 8px 0;
+        }
+
+        /* FORM */
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div><strong>Pulse Fitness</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="plans.html">Plans</a>
+            <a href="join.html">Join</a>
+            <a href="goals.html">Goals</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <div class="info">
+            <p><strong>Address:</strong> 123 Fitness Ave, Camden, NJ</p>
+            <p><strong>Email:</strong> info@pulsefitness.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+        </div>
+
+        <!-- FORM -->
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>

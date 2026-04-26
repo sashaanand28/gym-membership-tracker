@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Pulse Fitness</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .form-section {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 15px;
+            color: gray;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div><strong>Pulse Fitness</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="plans.html">Plans</a>
+            <a href="join.html">Join</a>
+            <a href="goals.html">Goals</a>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h1>Join Pulse Fitness</h1>
+        <p style="text-align:center;">Start your fitness journey today.</p>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="plan">Choose Membership Plan</label>
+            <select id="plan" name="plan" required>
+                <option value="">Select a plan</option>
+                <option value="Basic">Basic - Gym Access</option>
+                <option value="Premium">Premium - Gym + Classes</option>
+                <option value="Elite">Elite - Gym + Classes + Personal Trainer</option>
+            </select>
+
+            <button type="submit">Submit Membership Form</button>
+        </form>
+
+        <p class="note">This form can later connect to an Azure database.</p>
+    </div>
+
+</body>
+</html>

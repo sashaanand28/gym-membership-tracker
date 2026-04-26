@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progress Dashboard - Pulse Fitness</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .number {
+            font-size: 35px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .progress-bar {
+            background-color: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div><strong>Pulse Fitness</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="plans.html">Plans</a>
+            <a href="join.html">Join</a>
+            <a href="goals.html">Goals</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Member Progress Dashboard</h1>
+        <p style="text-align:center;">Track membership activity and fitness progress.</p>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h2>Goals Completed</h2>
+                <div class="number">3</div>
+                <p>Fitness goals completed this month</p>
+            </div>
+
+            <div class="card">
+                <h2>Weekly Workouts</h2>
+                <div class="number">4</div>
+                <p>Workouts completed this week</p>
+            </div>
+
+            <div class="card">
+                <h2>Membership Type</h2>
+                <div class="number">Premium</div>
+                <p>Gym access + group classes</p>
+            </div>
+
+            <div class="card">
+                <h2>Upcoming Fitness Target</h2>
+                <div class="number">Run 3 Miles</div>
+                <p>Deadline: Next Friday</p>
+            </div>
+
+            <div class="card">
+                <h2>Strength Goal Progress</h2>
+                <p>Bench Press Goal</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width:75%;">75%</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Cardio Goal Progress</h2>
+                <p>Running Goal</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width:60%;">60%</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<a href="dashboard.html">Dashboard</a>

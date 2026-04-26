@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Membership Plans - Pulse Fitness</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* PAGE TITLE */
+        .title {
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* PLAN CARDS */
+        .plans {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 25px;
+            margin: 10px 0;
+            color: black;
+        }
+
+        .features {
+            margin: 20px 0;
+        }
+
+        .features p {
+            margin: 8px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div><strong>Pulse Fitness</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="plans.html">Plans</a>
+            <a href="join.html">Join</a>
+            <a href="goals.html">Goals</a>
+        </div>
+    </div>
+
+    <!-- TITLE -->
+    <div class="title">
+        <h1>Choose Your Membership</h1>
+        <p>Select the plan that fits your fitness journey</p>
+    </div>
+
+    <!-- PLANS -->
+    <div class="plans">
+
+        <!-- BASIC -->
+        <div class="card">
+            <h2>Basic</h2>
+            <div class="price">$20/month</div>
+            <div class="features">
+                <p>✔ Gym Access</p>
+                <p>✔ Locker Room</p>
+                <p>✖ Classes</p>
+                <p>✖ Personal Trainer</p>
+            </div>
+            <a class="btn" href="join.html">Join Now</a>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="card">
+            <h2>Premium</h2>
+            <div class="price">$40/month</div>
+            <div class="features">
+                <p>✔ Gym Access</p>
+                <p>✔ Group Classes</p>
+                <p>✔ Locker Room</p>
+                <p>✖ Personal Trainer</p>
+            </div>
+            <a class="btn" href="join.html">Join Now</a>
+        </div>
+
+        <!-- ELITE -->
+        <div class="card">
+            <h2>Elite</h2>
+            <div class="price">$70/month</div>
+            <div class="features">
+                <p>✔ Gym Access</p>
+                <p>✔ Group Classes</p>
+                <p>✔ Personal Trainer</p>
+                <p>✔ Priority Support</p>
+            </div>
+            <a class="btn" href="join.html">Join Now</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
