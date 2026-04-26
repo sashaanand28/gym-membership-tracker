@@ -2,24 +2,32 @@
 <html>
 <head>
     <title>Pulse Fitness</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #fff0f5;
+            padding-top: 80px; /* space for fixed navbar */
         }
 
+        /* NAVBAR */
         .navbar {
-            background-color: black;
-            color: white;
+            background-color: #ffb6c1;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .navbar strong {
             font-size: 20px;
+            color: white;
         }
 
         .nav-links a {
@@ -33,11 +41,12 @@
             text-decoration: underline;
         }
 
+        /* HERO */
         .hero {
-            background-color: #222;
-            color: white;
             text-align: center;
             padding: 100px 20px;
+            background: linear-gradient(to bottom right, #ffc0cb, #ffe4e1);
+            color: white;
         }
 
         .hero h1 {
@@ -45,28 +54,56 @@
             margin-bottom: 10px;
         }
 
+        .hero p {
+            font-size: 18px;
+        }
+
         .btn {
             display: inline-block;
             margin: 15px 10px;
             padding: 12px 25px;
             background: white;
-            color: black;
+            color: #ff69b4;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 20px;
             font-weight: bold;
         }
 
+        .btn:hover {
+            background-color: #ffe4e1;
+        }
+
+        /* SECTION */
         .section {
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
+        }
+
+        .section h2 {
+            color: #ff69b4;
+        }
+
+        .section p {
+            color: #555;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffb6c1;
+            color: white;
         }
     </style>
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <div class="navbar">
-        <div><strong>Pulse Fitness</strong></div>
+        <div><strong>Pulse Fitness 💖</strong></div>
 
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -78,18 +115,28 @@
         </div>
     </div>
 
+    <!-- HERO -->
     <div class="hero">
-        <h1>Transform Your Body</h1>
-        <p>Track your goals. Stay motivated. Get results.</p>
+        <h1>Glow Up Your Fitness ✨</h1>
+        <p>Track your goals. Stay consistent. Feel confident.</p>
 
         <a class="btn" href="join.html">Join Now</a>
         <a class="btn" href="plans.html">View Plans</a>
     </div>
 
+    <!-- ABOUT -->
     <div class="section">
-        <h2>Why Choose Pulse Fitness?</h2>
-        <p>We combine flexible memberships, goal tracking, and fitness tools to help members stay consistent.</p>
+        <h2>Your Fitness, Your Way 💕</h2>
+        <p>
+            Pulse Fitness helps you stay motivated with personalized goals,
+            flexible memberships, and a supportive community.
+        </p>
     </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Pulse Fitness | Built with 💖</p>
+    </footer>
 
 </body>
 </html>
