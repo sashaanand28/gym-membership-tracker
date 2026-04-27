@@ -2,186 +2,111 @@
 <html>
 <head>
     <title>Goals Tracker - Pulse Fitness</title>
-
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .navbar {
-            background-color: black;
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.15);
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-
-        button {
-            margin-top: 25px;
-            width: 100%;
-            padding: 12px;
-            background-color: black;
-            color: white;
-            border: none;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .goal-card {
-            background: #f9f9f9;
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid black;
-        }
-
-        .progress-bar {
-            background-color: #ddd;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .progress {
-            background-color: black;
-            color: white;
-            padding: 8px;
-            text-align: center;
-            width: 0%;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #fff0f5; padding-top: 80px; color: #333; }
+        .navbar { background: #ffb6c1; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; width: 100%; z-index: 1000; box-sizing: border-box; }
+        .navbar strong { color: white; font-size: 20px; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
+        .container { max-width: 850px; margin: 40px auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 0 12px rgba(0,0,0,0.1); }
+        h1, h2 { text-align: center; color: #ff69b4; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 8px; }
+        button { margin-top: 25px; width: 100%; padding: 12px; background: #ff69b4; color: white; border: none; font-size: 16px; border-radius: 25px; cursor: pointer; font-weight: bold; }
+        .goal-card { background: #fff0f5; margin-top: 20px; padding: 20px; border-radius: 15px; border-left: 6px solid #ff69b4; }
+        .progress-bar { background: #f3c5d3; border-radius: 20px; overflow: hidden; margin-top: 10px; }
+        .progress { background: #ff69b4; color: white; padding: 8px; text-align: center; width: 0%; }
+        footer { text-align: center; padding: 20px; background: #ffb6c1; color: white; margin-top: 40px; }
     </style>
 </head>
-
 <body>
 
-    <div class="navbar">
-        <div><strong>Pulse Fitness</strong></div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="plans.html">Plans</a>
-            <a href="join.html">Join</a>
-            <a href="goals.html">Goals</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="contact.html">Contact</a>
-        </div>
+<div class="navbar">
+    <div><strong>Pulse Fitness</strong></div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="join.html">Join</a>
+        <a href="goals.html">Goals</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
     </div>
+</div>
 
-    <div class="container">
-        <h1>Fitness Goals Tracker</h1>
-        <p style="text-align:center;">Add a goal and track your progress.</p>
+<div class="container">
+    <h1>Fitness Goals Tracker</h1>
+    <p style="text-align:center;">Add a goal and track your progress.</p>
 
-        <form id="goalForm">
-            <label for="goalName">Goal Name</label>
-            <input type="text" id="goalName" placeholder="Example: Lose 10 pounds" required>
+    <form id="goalForm">
+        <label>Goal Name</label>
+        <input type="text" id="goalName" placeholder="Example: Lose 10 pounds" required>
 
-            <label for="goalType">Goal Type</label>
-            <select id="goalType" required>
-                <option value="">Select goal type</option>
-                <option value="Weight Loss">Weight Loss</option>
-                <option value="Strength">Strength</option>
-                <option value="Cardio">Cardio</option>
-                <option value="Workout Frequency">Workout Frequency</option>
-                <option value="Nutrition">Nutrition</option>
-            </select>
+        <label>Goal Type</label>
+        <select id="goalType" required>
+            <option value="">Select goal type</option>
+            <option>Weight Loss</option>
+            <option>Strength</option>
+            <option>Cardio</option>
+            <option>Workout Frequency</option>
+            <option>Nutrition</option>
+        </select>
 
-            <label for="startValue">Start Value</label>
-            <input type="number" id="startValue" placeholder="Example: 0" required>
+        <label>Start Value</label>
+        <input type="number" id="startValue" required>
 
-            <label for="targetValue">Target Value</label>
-            <input type="number" id="targetValue" placeholder="Example: 10" required>
+        <label>Target Value</label>
+        <input type="number" id="targetValue" required>
 
-            <label for="currentValue">Current Value</label>
-            <input type="number" id="currentValue" placeholder="Example: 4" required>
+        <label>Current Value</label>
+        <input type="number" id="currentValue" required>
 
-            <label for="deadline">Deadline</label>
-            <input type="date" id="deadline" required>
+        <label>Deadline</label>
+        <input type="date" id="deadline" required>
 
-            <button type="submit">Add Goal</button>
-        </form>
+        <button type="submit">Add Goal</button>
+    </form>
 
-        <h2>Your Goals</h2>
-        <div id="goalsList"></div>
-    </div>
+    <h2>Your Goals</h2>
+    <div id="goalsList"></div>
+</div>
 
-    <script>
-        document.getElementById("goalForm").addEventListener("submit", function(event) {
-            event.preventDefault();
+<script>
+    document.getElementById("goalForm").addEventListener("submit", function(event) {
+        event.preventDefault();
 
-            let goalName = document.getElementById("goalName").value;
-            let goalType = document.getElementById("goalType").value;
-            let startValue = Number(document.getElementById("startValue").value);
-            let targetValue = Number(document.getElementById("targetValue").value);
-            let currentValue = Number(document.getElementById("currentValue").value);
-            let deadline = document.getElementById("deadline").value;
+        let goalName = document.getElementById("goalName").value;
+        let goalType = document.getElementById("goalType").value;
+        let startValue = Number(document.getElementById("startValue").value);
+        let targetValue = Number(document.getElementById("targetValue").value);
+        let currentValue = Number(document.getElementById("currentValue").value);
+        let deadline = document.getElementById("deadline").value;
 
-            let progress = ((currentValue - startValue) / (targetValue - startValue)) * 100;
+        let progress = ((currentValue - startValue) / (targetValue - startValue)) * 100;
+        if (progress < 0) progress = 0;
+        if (progress > 100) progress = 100;
 
-            if (progress < 0) {
-                progress = 0;
-            }
+        let goalCard = document.createElement("div");
+        goalCard.className = "goal-card";
 
-            if (progress > 100) {
-                progress = 100;
-            }
+        goalCard.innerHTML = `
+            <h3>${goalName}</h3>
+            <p><strong>Category:</strong> ${goalType}</p>
+            <p><strong>Start Value:</strong> ${startValue}</p>
+            <p><strong>Target Value:</strong> ${targetValue}</p>
+            <p><strong>Current Value:</strong> ${currentValue}</p>
+            <p><strong>Deadline:</strong> ${deadline}</p>
+            <div class="progress-bar">
+                <div class="progress" style="width:${progress}%;">${Math.round(progress)}%</div>
+            </div>
+        `;
 
-            let goalCard = document.createElement("div");
-            goalCard.className = "goal-card";
+        document.getElementById("goalsList").appendChild(goalCard);
+        document.getElementById("goalForm").reset();
+    });
+</script>
 
-            goalCard.innerHTML = `
-                <h3>${goalName}</h3>
-                <p><strong>Category:</strong> ${goalType}</p>
-                <p><strong>Start Value:</strong> ${startValue}</p>
-                <p><strong>Target Value:</strong> ${targetValue}</p>
-                <p><strong>Current Value:</strong> ${currentValue}</p>
-                <p><strong>Deadline:</strong> ${deadline}</p>
-
-                <div class="progress-bar">
-                    <div class="progress" style="width:${progress}%;">
-                        ${Math.round(progress)}%
-                    </div>
-                </div>
-            `;
-
-            document.getElementById("goalsList").appendChild(goalCard);
-
-            document.getElementById("goalForm").reset();
-        });
-    </script>
+<footer>
+    <p>2026 Pulse Fitness | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
